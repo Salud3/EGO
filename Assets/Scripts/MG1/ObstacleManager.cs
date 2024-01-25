@@ -18,6 +18,10 @@ public class ObstacleManager: MonoBehaviour
         {
             Spawn();
             spawnTime = Time.time + TimePrevSpawn;
+            if (TimePrevSpawn > 3)
+            {
+                TimePrevSpawn -= 1;
+            }
         }
     }
 
@@ -31,4 +35,5 @@ public class ObstacleManager: MonoBehaviour
         Instantiate(obs, transform.position + new Vector3(randomX, transform.position.y, 0), transform.rotation);
 
     }
+
 }

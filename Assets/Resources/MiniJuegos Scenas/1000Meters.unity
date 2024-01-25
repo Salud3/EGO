@@ -635,9 +635,9 @@ MonoBehaviour:
   - {fileID: 3357394107385626851, guid: c7b233bba7d0bef48983897dfa23dcfe, type: 3}
   - {fileID: 8324176389051943212, guid: abc31893fbfdac4428dde13ca1dd0e34, type: 3}
   - {fileID: 8866916287321871275, guid: 8f1cf11a57743fc4ba893c793dcf7ea3, type: 3}
-  maxX: 3.5
-  minX: 2.5
-  TimePrevSpawn: 0.6
+  maxX: 4
+  minX: 3
+  TimePrevSpawn: 7
   spawnTime: 0
 --- !u!4 &947551325
 Transform:
@@ -648,7 +648,7 @@ Transform:
   m_GameObject: {fileID: 947551323}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23, y: -2.72, z: 0}
+  m_LocalPosition: {x: 23, y: -1.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -698,9 +698,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 947551325}
   - {fileID: 779804556}
   - {fileID: 1427962181}
-  - {fileID: 947551325}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1045300330
@@ -715,8 +715,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957291d30120dbf4e80fa2772e33516c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startG: 0
+  player: {fileID: 7105743}
+  maxSpeed: 12
   timer: 0
+  startG: 0
+  finished: 0
 --- !u!1 &1427962178
 GameObject:
   m_ObjectHideFlags: 0

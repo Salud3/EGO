@@ -8,7 +8,10 @@ public class GameMovement : MonoBehaviour
 
     public float cameraSpeed;
 
-
+    private void Start()
+    {
+        Instance = this;
+    }
     private void FixedUpdate()
     {
         if (GMaster1.Instance.startG)
