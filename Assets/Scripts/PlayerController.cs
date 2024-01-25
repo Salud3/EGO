@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float velocityMove;
 
-    void Start()
+    void Update()
     {
         //rb = GetComponent<Rigidbody2D>();
 
