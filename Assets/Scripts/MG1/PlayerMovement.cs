@@ -51,7 +51,6 @@ public class PlayerMovement : MonoBehaviour
         if (jumping && GMaster1.Instance.startG)
         {
             rg.MovePosition(transform.position + new Vector3(speed, jumpForce) * Time.deltaTime);
-
         }
         else if (!jumping && GMaster1.Instance.startG)
         {
@@ -102,6 +101,10 @@ public class PlayerMovement : MonoBehaviour
         {
             speed -= 2;
         }
+    }
+   public void changeSpeedUp(float a)
+    {
+        speed += a;
     }
 
 }

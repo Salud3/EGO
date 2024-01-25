@@ -5,15 +5,28 @@ using UnityEngine;
 public class GMaster1 : MonoBehaviour
 {
     public static GMaster1 Instance;
+    public PlayerMovement player;
 
-    public bool startG;
+    public float maxSpeed;
     [SerializeField] float timer;
+    public bool startG;
+    public bool finished;
     
 
     private void Awake()
     {
         Instance = this;
         timer = 0;
+    }
+    public void ChangeUpSpeed()
+    {
+        float a = Time.fixedDeltaTime * 0.08f;
+        if (GameMovement.Instance.cameraSpeed < maxSpeed)
+        {
+        player.changeSpeedUp(a);
+        GameMovement.Instance.cameraSpeed += a;
+        }
+
     }
     public void ChangeDownSpeed()
     {
@@ -37,8 +50,8 @@ public class GMaster1 : MonoBehaviour
         }
         if (startG)
         {
-
-            timer += Time.fixedDeltaTime;
+            timer += Time.fixedDeltaTime*.12f;
+            ChangeUpSpeed();
         }
     }
 }
