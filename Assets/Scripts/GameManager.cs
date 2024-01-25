@@ -13,6 +13,12 @@ public class GameManager : MonoBehaviour
         Debug.Log(totalPoints);
     }
 
+    public void SubtractPoints(int pointsToSubtract)
+    {
+        totalPoints -= pointsToSubtract;
+        Debug.Log(totalPoints);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
