@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 02d6bb7c25c1ed54eab4f0ae6e4ee33f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -165,4 +165,3 @@ MonoBehaviour:
   worth: 5
   soundFood: {fileID: 0}
   soundNotFood: {fileID: 0}
-  gameManager: {fileID: 0}

@@ -9,6 +9,7 @@ TagManager:
   - NotFood
   - Deleter
   - ForDelete
+  - Floor
   layers:
   - Default
   - TransparentFX

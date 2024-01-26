@@ -20,6 +20,11 @@ public class GameManager : MonoBehaviour
         Debug.Log(totalPoints);
     }
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

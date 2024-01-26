@@ -31,7 +31,11 @@ public class Items : MonoBehaviour
             }
             else if (this.CompareTag("NotFood"))
             {
-                gameManager.SubtractPoints(worth);
+                GameManager.Instance.SubtractPoints(worth);
+                Destroy(this.gameObject);
+            }
+            else if (this.CompareTag("Floor"))
+            {
                 Destroy(this.gameObject);
             }
         }
