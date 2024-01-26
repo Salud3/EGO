@@ -24,7 +24,7 @@ public class ObstacleManager: MonoBehaviour
             {
                 Hardcoretimer += Time.deltaTime;
 
-                if (Hardcoretimer >= (TimePrevSpawn * .75) && (GMaster1.Instance.Dist < 950.5f))
+                if (Hardcoretimer >= (TimePrevSpawn * .75) && (GMaster1.Instance.xRun > 50.5f))
                 {
                     Hardcoretimer = 0;
                     Spawn();
