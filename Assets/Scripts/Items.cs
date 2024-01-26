@@ -7,7 +7,6 @@ public class Items : MonoBehaviour
     public int worth;
     public AudioClip soundFood;
     public AudioClip soundNotFood;
-    [SerializeField] public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +26,7 @@ public class Items : MonoBehaviour
         {
             if (this.CompareTag("Food"))
             {
-                gameManager.ScorePoints(worth);
+                GameManager.Instance.ScorePoints(worth);
                 Destroy(this.gameObject);
             }
             else if (this.CompareTag("NotFood"))
