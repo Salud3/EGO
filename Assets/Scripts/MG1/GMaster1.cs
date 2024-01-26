@@ -20,13 +20,14 @@ public class GMaster1 : MonoBehaviour
     [SerializeField] TextMeshProUGUI Minutero;   
     public float Tim{ get { return timer; } }
     int minutos, segundos, cent;
+
+
     [Header("Minutero")]
     [SerializeField] float distance;
     public float Dist { get { return distance; } }
-
-
-
-
+    [SerializeField] TextMeshProUGUI Distance;
+    float xPlayer;
+    public float xRun { get { return xPlayer; } }
 
     private void Awake()
     {
@@ -81,6 +82,11 @@ public class GMaster1 : MonoBehaviour
     private void FixedUpdate()
     {
         distance = Vector2.Distance(player.gameObject.transform.position, finish.transform.position);
+        Distance.text = "Distance to Goal: " + distance.ToString("#.#") + " Mts";
+
+        xPlayer = -(player.transform.position.x - finish.transform.position.x);
+
+        Debug.Log(xPlayer.ToString("#.#"));
     }
 
 }
