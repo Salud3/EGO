@@ -7,13 +7,21 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rg;
     [SerializeField] float jumpForce;
     [SerializeField] LayerMask ContactoInferior;
+    
+    [Header("Movimiento")]
     [SerializeField] float gravity = 9.81f;
-    [SerializeField] float jumpBufferTime = 1.5f;
-    [SerializeField] float jumpBufferTim;
-    [SerializeField] bool jumping;
     [SerializeField] float speed;
 
+    [Header("Salto")]
+    [SerializeField] bool canJump;
+    [SerializeField] bool jumping;
+    [SerializeField] float jumpBufferTime = 1.5f;
+    [SerializeField] float jumpBufferTim;
 
+    [Header("Invulnerabilidad")]
+    [SerializeField] bool invulnerable = false;
+    [SerializeField] float invultimebuffer = 1.5f;
+    [SerializeField] float bufferinvul;
     private void Awake()
     {
         rg = GetComponent<Rigidbody2D>();
@@ -22,6 +30,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (invulnerable)
+        {
+            bufferinvul += Time.fixedDeltaTime;
+            if (bufferinvul > invultimebuffer)
+            {
+                invulnerable = false;
+                bufferinvul = 0;
+            }
+        }
+
         if (jumping && GMaster1.Instance.startG)
         {
             jumpBufferTim += Time.fixedDeltaTime;
@@ -36,8 +54,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumping = true;
 
-        }
-        if (Input.GetKeyUp(KeyCode.Space) && GMaster1.Instance.startG)
+        }else if (Input.GetKeyUp(KeyCode.Space) && GMaster1.Instance.startG)
         {
             jumping = false;
 
@@ -50,16 +67,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (jumping && GMaster1.Instance.startG)
         {
-            rg.MovePosition(transform.position + new Vector3(speed, jumpForce) * Time.deltaTime);
+            //rg.MovePosition(transform.position + new Vector3(speed, jumpForce) * Time.deltaTime);
+            rg.velocity = new Vector2(GMaster1.Instance.Speed,jumpForce);
         }
         else if (!jumping && GMaster1.Instance.startG)
         {
-
-            rg.MovePosition(transform.position + new Vector3(speed, -gravity) * Time.deltaTime);
+            rg.MovePosition(transform.position + new Vector3(GMaster1.Instance.Speed, -gravity) * Time.deltaTime);
         }
     }
 
-    [SerializeField] bool canJump;
 
     void DetectCollisions()
     {
@@ -86,25 +102,8 @@ public class PlayerMovement : MonoBehaviour
         if(collision.tag == "Enemy")
         {
             GMaster1.Instance.ChangeDownSpeed();
-            changeSpeedD();
+            invulnerable = true;
         }
-    }
-
-    void changeSpeedD()
-    {
-        if (speed <= 3)
-        {
-            speed = 2;
-
-        }
-        else
-        {
-            speed -= 2;
-        }
-    }
-   public void changeSpeedUp(float a)
-    {
-        speed += a;
     }
 
 }

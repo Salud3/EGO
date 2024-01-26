@@ -6,8 +6,6 @@ public class GameMovement : MonoBehaviour
 {
     public static GameMovement Instance;
 
-    public float cameraSpeed;
-
     private void Start()
     {
         Instance = this;
@@ -17,9 +15,11 @@ public class GameMovement : MonoBehaviour
         if (GMaster1.Instance.startG)
         {
 
-            transform.position += new Vector3(cameraSpeed * Time.fixedDeltaTime, 0, 0);
+            transform.position += new Vector3(GMaster1.Instance.Speed * Time.fixedDeltaTime, 0, 0);
         }
 
     }
+
+
 
 }
