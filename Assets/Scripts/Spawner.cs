@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] GameObject[] foodPrefab;
-    [SerializeField] GameObject[] notFoodPrefab;
+    [SerializeField] GameObject[] elements;
     [SerializeField] float secondSpawn = 0.5f;
     [SerializeField] float minTras;
     [SerializeField] float maxTras;
@@ -21,7 +20,7 @@ public class Spawner : MonoBehaviour
         {
             var wanted = Random.Range(minTras, maxTras);
             var position = new Vector2(wanted, transform.position.y);
-            GameObject gameObject = Instantiate(foodPrefab[Random.Range(0, foodPrefab.Length)], position, Quaternion.identity);
+            GameObject gameObject = Instantiate(elements[Random.Range(0, elements.Length)], position, Quaternion.identity);
             yield return new WaitForSeconds(secondSpawn);
         }
     }
