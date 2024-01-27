@@ -22,16 +22,7 @@ public class Spawner : MonoBehaviour
             var position = new Vector2(wanted, transform.position.y);
             GameObject gameObject = Instantiate(elements[Random.Range(0, elements.Length)], position, Quaternion.identity);
             yield return new WaitForSeconds(secondSpawn);
-            Destroy(gameObject, 5f);
+            Destroy(gameObject, 3f);
         }
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (CompareTag("Floor"))
-    //    {
-    //        Destroy(this.gameObject);
-    //    }
-    //}
-
 }
