@@ -603,8 +603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInfo: []
-  scoreTemp: 0
-  nameTemp: 
+  scoreTemp: 800
+  nameTemp: Kodios
 --- !u!4 &341393195
 Transform:
   m_ObjectHideFlags: 0
