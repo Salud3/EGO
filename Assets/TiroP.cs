@@ -46,6 +46,21 @@ public class TiroP : MonoBehaviour
 
 		rb.bodyType = RigidbodyType2D.Dynamic;
 		rb.velocity = -dis.normalized * maxVel * dis.magnitude / springRange;
+
 	}
+
+
+    private void FixedUpdate()
+    {
+        if (!canDrag)
+		{
+			rb.velocity -= new Vector2 (0.1f, 0);
+			if(rb.velocity.x <= 0.1)
+			{
+				rb.velocity = new Vector2(0, -rb.gravityScale);
+			}
+		}
+    }
+
 }
 
