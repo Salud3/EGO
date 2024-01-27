@@ -10,6 +10,7 @@ TagManager:
   - Deleter
   - ForDelete
   - Floor
+  - Finished
   layers:
   - Default
   - TransparentFX

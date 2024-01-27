@@ -24,10 +24,11 @@ public class ObstacleManager: MonoBehaviour
             {
                 Hardcoretimer += Time.deltaTime;
 
-                if (Hardcoretimer >= (TimePrevSpawn * .75) && (GMaster1.Instance.xRun > 50.5f))
+                if (Hardcoretimer >= (TimePrevSpawn * .65))
                 {
+
                     Hardcoretimer = 0;
-                    Spawn();
+                    SpawnCall();
                     if (count >= 3 && TimePrevSpawn > 4)
                     {
                         Debug.Log("Spawn normal minus");
@@ -49,11 +50,10 @@ public class ObstacleManager: MonoBehaviour
             {
                 spawnTime += Time.deltaTime;
 
-                if (spawnTime >= TimePrevSpawn && (GMaster1.Instance.Dist < 950.5f))
+                if (spawnTime >= TimePrevSpawn && (GMaster1.Instance.xRun > 50.5f))
                 {
                     spawnTime = 0;
-                    Spawn();
-
+                    SpawnCall();
                     if (count >= 3 && TimePrevSpawn > 4)
                     {
                         Debug.Log("Spawn normal minus");
@@ -79,6 +79,19 @@ public class ObstacleManager: MonoBehaviour
         hardcore = !hardcore;
     }
 
+    bool CanSpawn(){
+        return GMaster1.Instance.xRun > 50.5f && !GMaster1.Instance.finished;
+    }
+
+    void SpawnCall()
+    {
+        if (CanSpawn())
+        {
+            Spawn();
+        }
+ 
+
+    }
 
     int count;
     void Spawn()

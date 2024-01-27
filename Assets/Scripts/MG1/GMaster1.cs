@@ -55,12 +55,20 @@ public class GMaster1 : MonoBehaviour
     
     void CalcTime()
     {
+        if (!finished)
+        {
+
         timer += Time.deltaTime;
         minutos = (int)(timer / 60);
         segundos = (int)(timer - minutos * 60f);
         cent = (int)((timer - (int)timer) * 100f);
 
         Minutero.text = string.Format("{0:00}:{1:00}:{2:00}", minutos, segundos, cent);
+        }
+        else
+        {
+
+        }
     }
     
     void Update()
@@ -73,9 +81,18 @@ public class GMaster1 : MonoBehaviour
         }
         if (startG)
         {
+            if (!finished)
+            {
             CalcTime();
             ChangeUpSpeed();
+            }
+            else
+            {
+                Debug.Log("Finished");
+                speed = 0.2f;
+            }
         }
+        
     }
 
 

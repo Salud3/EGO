@@ -14,8 +14,9 @@ public class GameMovement : MonoBehaviour
     {
         if (GMaster1.Instance.startG)
         {
-
+        
             transform.position += new Vector3(GMaster1.Instance.Speed * Time.fixedDeltaTime, 0, 0);
+        
         }
 
     }

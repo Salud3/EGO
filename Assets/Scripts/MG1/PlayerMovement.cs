@@ -104,6 +104,11 @@ public class PlayerMovement : MonoBehaviour
             GMaster1.Instance.ChangeDownSpeed();
             invulnerable = true;
         }
+        if (collision.tag == "Finished")
+        {
+            GMaster1.Instance.finished = true;
+        }
+
     }
 
 }
