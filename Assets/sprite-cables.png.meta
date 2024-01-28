@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 7a81f46f54c98bf4e9617022a9c5c581
+guid: 1e873c02f93a78545a101238f47e6c8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7328724050371652045
-    second: BrazoSolo_0
+      213: -4612780052235628664
+    second: luz
   - first:
-      213: -5393348324369236813
-    second: BrazoSolo_1
+      213: 6337646991719243360
+    second: cuerpo-cable
   - first:
-      213: 4919325747614622160
-    second: BrazoSolo_2
+      213: -5451783303251534561
+    second: final-cable
+  - first:
+      213: 3506576436694382158
+    second: conector
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -54,10 +57,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,26 +77,14 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,7 +96,43 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,64 +143,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BrazoSolo_0
+      name: luz
       rect:
         serializedVersion: 2
-        x: 18
-        y: 38
-        width: 5
-        height: 6
+        x: 22
+        y: 5
+        width: 65
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dc9a34fc1bbd4b560800000000000000
-      internalID: 7328724050371652045
+      spriteID: 88fcc776bfc1cffb0800000000000000
+      internalID: -4612780052235628664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BrazoSolo_1
+      name: cuerpo-cable
       rect:
         serializedVersion: 2
-        x: 34
-        y: 38
-        width: 5
-        height: 6
+        x: 114
+        y: 5
+        width: 117
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3bcf500364af625b0800000000000000
-      internalID: -5393348324369236813
+      spriteID: 06e9f355c58d3f750800000000000000
+      internalID: 6337646991719243360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BrazoSolo_2
+      name: final-cable
       rect:
         serializedVersion: 2
-        x: 23
-        y: 29
-        width: 11
-        height: 6
+        x: 240
+        y: 5
+        width: 43
+        height: 32
       alignment: 5
       pivot: {x: 1, y: 0.5}
+      border: {x: 21, y: 0, z: 16, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d594178ff5754b0800000000000000
+      internalID: -5451783303251534561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: conector
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 11
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0d1a00924b4f44440800000000000000
-      internalID: 4919325747614622160
+      spriteID: e467ce6c0bcd9a030800000000000000
+      internalID: 3506576436694382158
       vertices: []
       indices: 
       edges: []
@@ -189,9 +237,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BrazoSolo_0: 7328724050371652045
-      BrazoSolo_1: -5393348324369236813
-      BrazoSolo_2: 4919325747614622160
+      conector: 3506576436694382158
+      cuerpo-cable: 6337646991719243360
+      final-cable: -5451783303251534561
+      luz: -4612780052235628664
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 111943586}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.06, y: -3.25, z: 0}
+  m_LocalPosition: {x: -7.79, y: -2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -223,7 +223,7 @@ MonoBehaviour:
   springRange: 2
   maxVel: 35
   virtualCamera: {fileID: 1723876428}
-  distance: {fileID: 1332161606}
+  distance: {fileID: 0}
 --- !u!50 &111943590
 Rigidbody2D:
   serializedVersion: 4
@@ -692,53 +692,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114878735}
   m_CullTransparentMesh: 1
---- !u!1 &1332161605
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1332161607}
-  - component: {fileID: 1332161606}
-  m_Layer: 0
-  m_Name: DistanciaTExt
-  m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1332161606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332161605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3d22df7e0f7f7046b2c42958ce6291c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dentadura: {fileID: 111943588}
-  distanciaText: {fileID: 616888636}
-  distanciaVisible: 1
---- !u!4 &1332161607
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332161605}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.02, y: -3.24, z: -4.1412196}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1353626173
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,7 +881,7 @@ Transform:
   m_GameObject: {fileID: 1561935613}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.0599995, y: -3.2499998, z: -10}
+  m_LocalPosition: {x: -0.02, y: -0.03, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1135,7 +1088,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 111943588}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 8.597891
@@ -1164,7 +1117,7 @@ Transform:
   m_GameObject: {fileID: 1723876427}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.0599995, y: -3.2499998, z: -10}
+  m_LocalPosition: {x: -0.02, y: -0.03, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1180,6 +1133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2064476987}
+  - component: {fileID: 2064476988}
   m_Layer: 0
   m_Name: Pivote
   m_TagString: Untagged
@@ -1196,12 +1150,27 @@ Transform:
   m_GameObject: {fileID: 2064476986}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.04, y: -3.24, z: 0.035136208}
+  m_LocalPosition: {x: -7.77, y: -2.19, z: 0.035136208}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2064476988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064476986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d22df7e0f7f7046b2c42958ce6291c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dentadura: {fileID: 111943588}
+  distanciaText: {fileID: 616888636}
+  distanciaVisible: 1
 --- !u!1 &2130245612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,9 +1246,8 @@ SceneRoots:
   - {fileID: 1561935616}
   - {fileID: 1586954559}
   - {fileID: 2064476987}
+  - {fileID: 111943588}
   - {fileID: 1353626177}
   - {fileID: 2130245615}
-  - {fileID: 111943588}
   - {fileID: 1723876429}
   - {fileID: 706680571}
-  - {fileID: 1332161607}

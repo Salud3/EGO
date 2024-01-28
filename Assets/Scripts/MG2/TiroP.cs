@@ -12,7 +12,7 @@ using UnityEngine.SceneManagement;
 
 public class TiroP : MonoBehaviour
 {
-	//[SerializeField]Cable cable;
+	[SerializeField]Cable cable;
    public Transform pivot;
 	public float springRange;
 	public float maxVel;
@@ -42,11 +42,11 @@ public class TiroP : MonoBehaviour
             dis = dis.normalized * springRange;
         }
         transform.position = dis + pivot.position;
-	   /* cable.ActualizarPosicion(pos);
+	    cable.ActualizarPosicion(pos);
 
         cable.ActualizarRotacion();
         cable.ActualizarTamaño();
-	   */
+	   
     }
 
 	public void OnMouseUp()
