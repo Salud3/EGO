@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         }else if (Input.GetKeyUp(KeyCode.Space) && GMaster1.Instance.startG)
         {
             jumping = false;
+            jumpBufferTim = jumpBufferTime;
 
         }
     }

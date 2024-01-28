@@ -46,8 +46,10 @@ public class GameManager : MonoBehaviour
         nameTemp = name;
 
         SaveSystem.Instance.nameTemp = name;
+        SaveSystem.Instance.scoreTemp = totalPoints;
 
         SaveSystem.Instance.Saveall();
+
 
     }
 
