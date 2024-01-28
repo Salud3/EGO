@@ -8,7 +8,7 @@ using TMPro;
 public class Distancia : MonoBehaviour
 {
     [SerializeField]
-    private Transform checkPoint;
+    private Transform Dentadura;
     [SerializeField]
     private TextMeshProUGUI  distanciaText;
     private float distancia;
@@ -26,7 +26,7 @@ public class Distancia : MonoBehaviour
         }
         else
         {
-            distancia = Vector2.Distance(transform.position, checkPoint.position);
+            distancia = Vector2.Distance(transform.position, Dentadura.position);
             //distancia = (transform.position.x + checkPoint.transform.position.x);
             distanciaText.text = distancia.ToString("F1") + "Mts";
 
