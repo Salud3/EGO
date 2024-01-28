@@ -49,19 +49,20 @@ public class AudioManager : MonoBehaviour
                 init = true;
                 break;
             case 2:
-                PlayMusic("Alberca");
+                PlayMusic("1000Mts");
+                //PlayMusic("Alberca");
                 init = true;
                 break;
             case 3:
-                PlayMusic("1000Mts");
-                init = true;
-                break;
-            case 4:
                 PlayMusic("Atrapar");
                 init = true;
                 break;
-            case 5:
+            case 4:
                 PlayMusic("MainTheme");//Credits
+                init = true;
+                break;
+            case 5:
+                PlayMusic("MainTheme");
                 init = true;
                 break;
             default:
