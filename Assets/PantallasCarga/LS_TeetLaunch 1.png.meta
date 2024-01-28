@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LS_TeetLaunch 1_0: -3446483925491708565
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
