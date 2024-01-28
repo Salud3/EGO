@@ -1,6 +1,8 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -13,6 +15,8 @@ public class TiroP : MonoBehaviour
    public Transform pivot;
 	public float springRange;
 	public float maxVel;
+	public CinemachineVirtualCamera virtualCamera;
+	public Distancia distance;
 
 	Rigidbody2D rb;
 	void Start () 
@@ -54,12 +58,23 @@ public class TiroP : MonoBehaviour
     {
         if (!canDrag)
 		{
+			distance.distanciaVisible = true;
+			StartCoroutine(AfilliateCamera());
 			rb.velocity -= new Vector2 (0.1f, 0);
 			if(rb.velocity.x <= 0.1)
 			{
 				rb.velocity = new Vector2(0, -rb.gravityScale);
 			}
 		}
+    }
+
+
+	public IEnumerator AfilliateCamera()
+	{
+        yield return new WaitForSeconds(0.25f);
+		virtualCamera.Follow = this.gameObject.transform;
+		virtualCamera.LookAt = this.gameObject.transform;
+        yield return new WaitForSeconds(0.1f);
     }
 
 }

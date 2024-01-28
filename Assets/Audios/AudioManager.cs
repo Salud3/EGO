@@ -36,6 +36,8 @@ public class AudioManager : MonoBehaviour
 
     public void ChargeMusicLevel()
     {
+        musicSource.Stop();
+        Debug.Log("change music" + SceneManager.GetActiveScene().buildIndex);
         switch (SceneManager.GetActiveScene().buildIndex)
         {
             case 0:

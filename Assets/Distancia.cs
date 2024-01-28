@@ -12,16 +12,25 @@ public class Distancia : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI  distanciaText;
     private float distancia;
+    public bool distanciaVisible;
 
 
 
   
 
-    private void Update()
+    private void FixedUpdate()
     {
-        distancia = (transform.position.x + checkPoint.transform.position.x);
-        distanciaText.text = "Distancia:" + distancia.ToString("F1") + "Mts";
+        if (!distanciaVisible) 
+        {
+            distanciaText.text = " 0.0 " + "Mts";
+        }
+        else
+        {
+            distancia = Vector2.Distance(transform.position, checkPoint.position);
+            //distancia = (transform.position.x + checkPoint.transform.position.x);
+            distanciaText.text = distancia.ToString("F1") + "Mts";
 
+        }
 
        
     }
