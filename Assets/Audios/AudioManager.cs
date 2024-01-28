@@ -10,10 +10,8 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds,sfxSounds;
     public AudioSource musicSource, sfxSource;
 
-    public float defaultVolume = .5f;
     public float SavedMusicVolume = .5f;
     public float SavedSFXVolume = .5f;
-
 
     public bool init;
 
@@ -23,21 +21,12 @@ public class AudioManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
-
         }
-            DontDestroyOnLoad(gameObject);
-
-        SavedSFXVolume = PlayerPrefs.GetFloat("SFXVolume",defaultVolume);
-        SavedMusicVolume = PlayerPrefs.GetFloat("MusicVolume",defaultVolume);
-    }
-    public void SetVolumePref()
-    {
-        PlayerPrefs.SetFloat("SFXVolume", SavedSFXVolume);
-        PlayerPrefs.SetFloat("MusicVolume", SavedMusicVolume);
     }
 
    private void Start()
@@ -54,27 +43,23 @@ public class AudioManager : MonoBehaviour
                 init = true;
                 break;
             case 1:
-                PlayMusic("Etapa1");
+                PlayMusic("Dentadura");
                 init = true;
                 break;
             case 2:
-                PlayMusic("Etapa2");
+                PlayMusic("Alberca");
                 init = true;
                 break;
             case 3:
-                PlayMusic("Etapa3");
+                PlayMusic("1000Mts");
                 init = true;
                 break;
             case 4:
-                PlayMusic("Final");
+                PlayMusic("Atrapar");
                 init = true;
                 break;
             case 5:
-                PlayMusic("BadEnd");
-                init = true;
-                break;
-            case 6:
-                PlayMusic("GoodEnd");
+                PlayMusic("MainTheme");//Credits
                 init = true;
                 break;
             default:
@@ -82,6 +67,8 @@ public class AudioManager : MonoBehaviour
                 init = true;
                 break;
         }
+        MusicVolume(SavedMusicVolume);
+        SFXVolume(SavedSFXVolume);
     }
 
     public void PlayMusic(string name)
@@ -117,14 +104,12 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.volume = volume*volume;
         SavedMusicVolume = volume;
-        SetVolumePref();
     }
 
     public void SFXVolume(float volume)
     {
         sfxSource.volume = volume*volume;
         SavedSFXVolume = volume;
-        SetVolumePref();
-
     }
+
 }

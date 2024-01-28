@@ -6,7 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Resources/Scenes/MainMenu.unity
+    guid: bd7a3bc031ed2724582d621062c97a8b
+  - enabled: 1
     path: Assets/Resources/Scenes/MiniJuegos Scenas/Lanzamiento.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Resources/Scenes/Alberca(Fake).unity
+    guid: e339b8190f7382347aa0221eecd42969
+  - enabled: 1
+    path: Assets/Resources/Scenes/MiniJuegos Scenas/1000Meters.unity
+    guid: 94de58af1af10de458c6303fd9fec41f
+  - enabled: 1
+    path: Assets/Resources/Scenes/MiniJuegos Scenas/CatchTheFood.unity
+    guid: b03741fa0c7185f4680b998ca0e69d26
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

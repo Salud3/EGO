@@ -1,57 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
+    [SerializeField] string nameTemp;
+    public string NameTemp { get { return nameTemp; } }
+
+    [SerializeField] int totalPoints;
     public int TotalPoints { get { return totalPoints; } }
-    public int totalPoints;
-    public GameObject panel;
 
-    public void ScorePoints(int pointsToAdd)
-    {
-        totalPoints += pointsToAdd;
-        Debug.Log(totalPoints);
-
-        if (totalPoints >= 100)
-        {
-            Time.timeScale = 0f;
-            ActivatePanel();
-        }
-    }
-
-    public void SubtractPoints(int pointsToSubtract)
-    {
-        totalPoints -= pointsToSubtract;
-        Debug.Log(totalPoints);
-    }
 
     private void Awake()
     {
-        Instance = this;
-    }
-
-    void ActivatePanel()
-    {
-        if(panel != null)
+        if(Instance == null)
         {
-            panel.SetActive(true);
-        }
-    }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (panel != null)
+            Instance = this;
+        }else
         {
-            panel.SetActive(false);
+            Destroy(this);
         }
+
+        DontDestroyOnLoad(gameObject);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ScorePoints(int points)
     {
+        totalPoints += points;
         
     }
+
+    public void SubtractPoints(int points)
+    {
+        totalPoints -= points;
+        Debug.Log(totalPoints);
+    }
+
+    public void SetName(string name)
+    {
+        nameTemp = name;
+
+        SaveSystem.Instance.nameTemp = name;
+
+    }
+
+    public void SceneLoad(int a)
+    {
+        SceneManager.LoadScene(a);
+    }
+
 }
