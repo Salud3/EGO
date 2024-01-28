@@ -12,6 +12,7 @@ using UnityEngine.SceneManagement;
 
 public class TiroP : MonoBehaviour
 {
+	[SerializeField]Cable cable;
    public Transform pivot;
 	public float springRange;
 	public float maxVel;
@@ -27,30 +28,36 @@ public class TiroP : MonoBehaviour
 
 	bool canDrag = true;
 	Vector3 dis;
-	void OnMouseDrag()
+	
+	public void OnMouseDrag()
 	{
-		if (!canDrag)
-			return;
-		
-		var pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		dis = pos - pivot.position;
-		dis.z = 0;
-		if (dis.magnitude > springRange) 
-		{
-			dis = dis.normalized * springRange;		
-		}
-		transform.position = dis + pivot.position;
-	}
+        if (!canDrag)
+            return;
 
-	void OnMouseUp()
+        var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        dis = pos - pivot.position;
+        dis.z = 0;
+        if (dis.magnitude > springRange)
+        {
+            dis = dis.normalized * springRange;
+        }
+        transform.position = dis + pivot.position;
+	    cable.ActualizarPosicion(pos);
+
+        cable.ActualizarRotacion();
+        cable.ActualizarTamaño();
+
+    }
+
+	public void OnMouseUp()
 	{
 		if (!canDrag)
 			return;
 		canDrag = false;
 
 		rb.bodyType = RigidbodyType2D.Dynamic;
-		rb.velocity = -dis.normalized * maxVel * dis.magnitude / springRange;
-
+		//rb.velocity = -dis.normalized * maxVel * dis.magnitude / springRange;
+		rb.AddForce((-dis.normalized * maxVel * dis.magnitude / springRange), ForceMode2D.Impulse);
 	}
 
 
@@ -60,14 +67,15 @@ public class TiroP : MonoBehaviour
 		{
 			distance.distanciaVisible = true;
 			StartCoroutine(AfilliateCamera());
-			rb.velocity -= new Vector2 (0.1f, 0);
-			if(rb.velocity.x <= 0.1)
+			rb.velocity -= new Vector2 (0.05f, 0);
+
+			if(rb.velocity.y <= 0.1 && rb.velocity.x <= 0.1)
 			{
 				rb.velocity = new Vector2(0, -rb.gravityScale);
 			}
 		}
-    }
 
+    }
 
 	public IEnumerator AfilliateCamera()
 	{
