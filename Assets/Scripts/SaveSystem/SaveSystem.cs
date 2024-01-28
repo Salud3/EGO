@@ -15,6 +15,7 @@ public class SaveSystem : MonoBehaviour
 
     private void Awake()
     {
+            ReGenInfo();
         if (Instance == null)
         {
             Instance = this;
@@ -31,7 +32,7 @@ public class SaveSystem : MonoBehaviour
 
     public void ReadInfo()
     {
-        string url = Application.streamingAssetsPath + "/villagerInfo.json";
+        string url = Application.streamingAssetsPath + "/PlayerInfo.json";
         string json = File.ReadAllText(url);
 
         playerInfo = JsonHelper.FromJson<PlayerInfo>(json);
@@ -55,7 +56,7 @@ public class SaveSystem : MonoBehaviour
         }
 
         string json = JsonHelper.ToJson(playerInfo, true);
-        string url = Application.streamingAssetsPath + "/villagerInfo.json";
+        string url = Application.streamingAssetsPath + "/PlayerInfo.json";
         File.WriteAllText(url, json);
         print("Save level stations" + json);
 
@@ -106,7 +107,7 @@ public class SaveSystem : MonoBehaviour
         playerInfo[2] = new PlayerInfo(0, "-");
 
         string json = JsonHelper.ToJson(playerInfo, true);
-        string url = Application.streamingAssetsPath + "/villagerInfo.json";
+        string url = Application.streamingAssetsPath + "/PlayerInfo.json";
         File.WriteAllText(url, json);
 
     }
