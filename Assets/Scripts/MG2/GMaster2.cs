@@ -16,14 +16,14 @@ public class GMaster2 : MonoBehaviour
         StartCoroutine(ActivarBrazo());
     }
 
-    void End()
+    public void End()
     {
         animator.SetTrigger("FadeIn");
     }
 
     IEnumerator ActivarBrazo()
     {
-        yield return new WaitForSeconds(1.8f);
+        yield return new WaitForSeconds(2.3f);
         Brazo.SetActive(true);
         Dentadura.SetActive(true);
     }

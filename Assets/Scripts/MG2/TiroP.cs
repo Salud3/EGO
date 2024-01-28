@@ -43,7 +43,6 @@ public class TiroP : MonoBehaviour
         }
         transform.position = dis + pivot.position;
 	    cable.ActualizarPosicion(pos);
-
         cable.ActualizarRotacion();
         cable.ActualizarTamaño();
 	   
@@ -67,7 +66,9 @@ public class TiroP : MonoBehaviour
 		{
 			distance.distanciaVisible = true;
 			StartCoroutine(AfilliateCamera());
-			rb.velocity -= new Vector2 (.15f, 0);
+			rb.velocity -= new Vector2 (.05f, 0);
+			Animator a = rb.GetComponent<Animator>();
+			a.SetTrigger("Lanzado");
 
 			if(rb.velocity.y <= 0.1 && rb.velocity.x <= 0.1)
 			{
