@@ -32,5 +32,6 @@ public class ReadInput : MonoBehaviour
             input = name;
         }
         Debug.Log(input);
+        GameManager.Instance.SetName(input);
     }
 }

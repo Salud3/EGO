@@ -5,20 +5,6 @@ using UnityEngine;
 public class Items : MonoBehaviour
 {
     public int worth;
-    public AudioClip soundFood;
-    public AudioClip soundNotFood;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,12 +13,14 @@ public class Items : MonoBehaviour
             if (this.CompareTag("Food"))
             {
                 GameManager.Instance.ScorePoints(worth);
+                AudioManager.Instance.PlaySounds("Munch");
                 Destroy(this.gameObject);
             }
             else if (this.CompareTag("NotFood"))
             {
                 GameManager.Instance.SubtractPoints(worth);
                 Destroy(this.gameObject);
+                AudioManager.Instance.PlaySounds("Bonk");
             }
             else if (this.CompareTag("Floor"))
             {

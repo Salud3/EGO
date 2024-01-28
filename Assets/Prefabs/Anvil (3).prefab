@@ -162,6 +162,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e92f86e10250f40af375b5d716a706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worth: 8
-  soundFood: {fileID: 0}
-  soundNotFood: {fileID: 0}
+  worth: 25

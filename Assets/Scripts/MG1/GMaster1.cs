@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GMaster1 : MonoBehaviour
 {
@@ -28,6 +30,25 @@ public class GMaster1 : MonoBehaviour
     [SerializeField] TextMeshProUGUI Distance;
     float xPlayer;
     public float xRun { get { return xPlayer; } }
+
+
+    [Header("Others")]
+    public Sprite sprite;
+    public GameObject objectOff;
+    public Image charging;
+    public void OffObject()
+    {
+        objectOff.SetActive(false);
+    }
+    public void OnObject()
+    {
+        objectOff.SetActive(true);
+    }
+    public void ChangeCharging()
+    {
+        charging.sprite = sprite;
+    }
+
 
     private void Awake()
     {
@@ -76,7 +97,7 @@ public class GMaster1 : MonoBehaviour
         if (!startG&&Input.GetKeyDown(KeyCode.Space))
         {
             startG = true;
-
+            OffObject();
 
         }
         if (startG)
@@ -89,12 +110,28 @@ public class GMaster1 : MonoBehaviour
             else
             {
                 Debug.Log("Finished");
+                if (minutos > 1)
+                {
+                    GameManager.Instance.ScorePoints(100);
+                }
+                else 
+                {
+                    GameManager.Instance.ScorePoints(350);
+                }
+                End();
                 speed = 0.2f;
             }
         }
         
     }
 
+    void End()
+    {
+        charging.sprite = sprite;
+        Animator animator = charging.GetComponent<Animator>();
+        animator.SetTrigger("In");
+        GameManager.Instance.SceneLoad(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 
     private void FixedUpdate()
     {

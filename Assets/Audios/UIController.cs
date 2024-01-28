@@ -8,6 +8,8 @@ public class UIController : MonoBehaviour
 {
     public Slider _musicSlider, _sfxslider;
 
+    public bool onOthers;
+    
     private void Awake()
     {
         _musicSlider = GameObject.Find("/Canvas/MenuOptions/SliderMusic").GetComponent<Slider>();
@@ -48,5 +50,8 @@ public class UIController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    
+
 
 }

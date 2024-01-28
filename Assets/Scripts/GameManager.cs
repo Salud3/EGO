@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
 
         SaveSystem.Instance.nameTemp = name;
 
+        SaveSystem.Instance.Saveall();
+
     }
 
     public void SceneLoad(int a)
