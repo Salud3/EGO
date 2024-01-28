@@ -768,11 +768,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elements:
-  - {fileID: 3308519120269209105, guid: 9c2fd1a1e13c6284e9f6f20ebb635eae, type: 3}
   - {fileID: 8542138751424075133, guid: e8aae835705426c4b9061153d2a701c3, type: 3}
   - {fileID: 286536823423759197, guid: 72dc876de53273c4fad108e23a44421a, type: 3}
   - {fileID: 6728281629567368726, guid: ef27cfca126595c459bd2cfa6402b0fc, type: 3}
   - {fileID: 5926970080849267708, guid: 925b7f6f0205f6e4d8c9565560f8ae93, type: 3}
+  - {fileID: 3173204741420387963, guid: e62c3277a2c5d4c4eb69d867e1f5ab3c, type: 3}
+  - {fileID: 4992675087854610789, guid: 2b5032d477bab4b4386c7ab8defddc69, type: 3}
+  - {fileID: 452231722654843028, guid: 06f49e9bdd36821448336816bf4d4e2b, type: 3}
+  - {fileID: 6841373893172208791, guid: c0ab4ae8fe2ee584c94bab6eda76fdb1, type: 3}
   secondSpawn: 0.5
   minTras: -8
   maxTras: 8
@@ -785,7 +788,7 @@ Transform:
   m_GameObject: {fileID: 590053606}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 19.9, z: 0}
+  m_LocalPosition: {x: 0, y: 8.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1456,7 +1459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1173837931
 RectTransform:
   m_ObjectHideFlags: 0
