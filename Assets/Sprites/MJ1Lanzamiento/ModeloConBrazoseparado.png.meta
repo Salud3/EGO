@@ -113,16 +113,16 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ModeloConBrazoseparado_0
+      name: Brazo
       rect:
         serializedVersion: 2
-        x: 22
-        y: 28
-        width: 8
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        x: 23
+        y: 34
+        width: 6
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 2, z: 0, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -134,15 +134,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ModeloConBrazoseparado_1
+      name: Personaje
       rect:
         serializedVersion: 2
-        x: 60
+        x: 61
         y: 0
-        width: 29
-        height: 62
+        width: 27
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,10 +154,52 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Mano
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 29
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aaec3b3dc5e560448c6f66c5458f1ec
+      internalID: 1068694609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Inmovil
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 46
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f87879f8e4804f48b7adbf089b5b8c1
+      internalID: -2126959027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9dc1b11accc7e9d4f8907184bd45b302
     internalID: 0
     vertices: []
     indices: 
@@ -165,8 +207,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ModeloConBrazoseparado_0: -8307648754930378046
-      ModeloConBrazoseparado_1: -3244766577890890444
+      Brazo: -8307648754930378046
+      Inmovil: -2126959027
+      Mano: 1068694609
+      Personaje: -3244766577890890444
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
