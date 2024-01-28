@@ -53,13 +53,15 @@ public class TiroP : MonoBehaviour
 		if (!canDrag)
 			return;
 		canDrag = false;
+		enAire = true;
 
 		rb.bodyType = RigidbodyType2D.Dynamic;
 		//rb.velocity = -dis.normalized * maxVel * dis.magnitude / springRange;
 		rb.AddForce((-dis.normalized * maxVel * dis.magnitude / springRange), ForceMode2D.Impulse);
 	}
 
-
+	bool enAire;
+	bool Frenando;
     private void FixedUpdate()
     {
         if (!canDrag)
@@ -68,18 +70,30 @@ public class TiroP : MonoBehaviour
 			StartCoroutine(AfilliateCamera());
 			rb.velocity -= new Vector2 (0.05f, 0);
 			rb.velocity -= new Vector2 (.05f, 0);
-			Animator a = rb.GetComponent<Animator>();
-			a.SetTrigger("Lanzado");
-
+			//Animator a = rb.GetComponent<Animator>();
+			//a.SetTrigger("Lanzado");
+			
 			if(rb.velocity.y <= 0.1 && rb.velocity.x <= 0.1)
 			{
-				rb.velocity = new Vector2(0, -rb.gravityScale);
+				rb.velocity = new Vector2(0, -rb.gravityScale*5);
+					
+				if (enAire && !Frenando)
+					{
+						StartCoroutine(EndGame());
+					}
 			}
 		}
 
     }
 
-	public IEnumerator AfilliateCamera()
+    public IEnumerator EndGame()
+	{
+		Frenando = true;
+        yield return new WaitForSeconds(1.55f);
+        GameManager.Instance.ScorePoints((int)Distancia.Instance.Dist / 2);
+		GMaster2.Instance.End();
+    }
+    public IEnumerator AfilliateCamera()
 	{
         yield return new WaitForSeconds(0.25f);
 		virtualCamera.Follow = this.gameObject.transform;

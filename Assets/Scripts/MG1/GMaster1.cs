@@ -118,19 +118,30 @@ public class GMaster1 : MonoBehaviour
                 {
                     GameManager.Instance.ScorePoints(350);
                 }
-                End();
+                if (!Charge)
+                {
+                    End();
+
+                }
                 speed = 0.2f;
             }
         }
         
     }
-
+    bool Charge;
     void End()
     {
+        Charge = true;
         charging.sprite = sprite;
         Animator animator = charging.GetComponent<Animator>();
         animator.SetTrigger("In");
+        StartCoroutine(StartChangeScene());
+    }
+    IEnumerator StartChangeScene()
+    {
+        yield return new WaitForSeconds(3.2f);
         GameManager.Instance.SceneLoad(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 
     private void FixedUpdate()
