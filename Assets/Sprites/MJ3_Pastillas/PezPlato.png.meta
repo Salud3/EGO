@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 30584fe1313db1043acf9c1183bd78ea
+guid: 331e0e9ac95d4fa418e82097b7b3125b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6075358357387050087
-    second: SS_WheelChariGrand_0
-  - first:
-      213: -601370280190546736
-    second: SS_WheelChariGrand_1
-  - first:
-      213: 7490898852471428917
-    second: SS_WheelChariGrand_2
-  - first:
-      213: 7371745024076466474
-    second: SS_WheelChariGrand_3
-  - first:
-      213: 7782239313946486475
-    second: SS_WheelChariGrand_4
+      213: 3050118314709468751
+    second: PezPlato_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -122,106 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SS_WheelChariGrand_0
+      name: PezPlato_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 2
-        width: 47
-        height: 56
+        x: 0
+        y: 0
+        width: 58
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9938eb833cdffaba0800000000000000
-      internalID: -6075358357387050087
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SS_WheelChariGrand_1
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 2
-        width: 41
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 2, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0dce3c69ae087a7f0800000000000000
-      internalID: -601370280190546736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SS_WheelChariGrand_2
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 2
-        width: 40
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 6, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 537d0fd51d405f760800000000000000
-      internalID: 7490898852471428917
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SS_WheelChariGrand_3
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 1
-        width: 41
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 6, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a29c4deca03bd4660800000000000000
-      internalID: 7371745024076466474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SS_WheelChariGrand_4
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 2
-        width: 41
-        height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc62cd88c61100c60800000000000000
-      internalID: 7782239313946486475
+      spriteID: f46cb2f6272345a20800000000000000
+      internalID: 3050118314709468751
       vertices: []
       indices: 
       edges: []
@@ -229,7 +133,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 40854f3e85e40b0449fb71271a416d42
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -237,11 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SS_WheelChariGrand_0: -6075358357387050087
-      SS_WheelChariGrand_1: -601370280190546736
-      SS_WheelChariGrand_2: 7490898852471428917
-      SS_WheelChariGrand_3: 7371745024076466474
-      SS_WheelChariGrand_4: 7782239313946486475
+      PezPlato_0: 3050118314709468751
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
