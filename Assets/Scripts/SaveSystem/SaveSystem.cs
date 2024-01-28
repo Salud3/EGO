@@ -15,9 +15,17 @@ public class SaveSystem : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            ReadInfo();
+        }
+        else
+        {
+            Destroy(this);
+        }
 
-        ReadInfo();
+        DontDestroyOnLoad(gameObject);
     }
     
 
