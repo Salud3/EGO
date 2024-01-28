@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     public TMP_Text textTime;
     public float time = 0;
     public GameObject panelFinish;
+    public TextMeshProUGUI totalPointsText;
 
     private void Start()
     {
@@ -34,6 +35,7 @@ public class Timer : MonoBehaviour
         if (panelFinish != null)
         {
             panelFinish.SetActive(true);
+            totalPointsText.text = ("Your final score: ") + GameManager.Instance.TotalPoints.ToString();
         }
     }
 }
