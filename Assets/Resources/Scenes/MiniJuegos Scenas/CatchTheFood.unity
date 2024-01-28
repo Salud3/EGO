@@ -361,8 +361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf046f46cf88aa4998e6298c6c7a1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameTemp: 
   totalPoints: 0
-  panel: {fileID: 1173837930}
 --- !u!4 &163588735
 Transform:
   m_ObjectHideFlags: 0
