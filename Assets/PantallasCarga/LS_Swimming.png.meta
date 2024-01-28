@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 598a3f09bb3138341b504c7c70172bf3
+guid: 797e6ea8e1738f64c9b87012fff23be3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8161096327289843469
-    second: LS_PillCatch_0
+      213: -2772030277624256694
+    second: LS_Swimming_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LS_PillCatch_0
+      name: LS_Swimming_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f0d4223126fdbe80800000000000000
-      internalID: -8161096327289843469
+      spriteID: a47249b3625c789d0800000000000000
+      internalID: -2772030277624256694
       vertices: []
       indices: 
       edges: []
@@ -133,15 +133,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      LS_PillCatch_0: -8161096327289843469
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

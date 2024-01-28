@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 00cc75fa219ec1147b2be1eff4be25d8
+guid: 140cab9d2f2752b4a927a3253eecd76a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 152463745725646575
-    second: LS_SwimmingWheelChair_0
+      213: 6745499964573427888
+    second: LS_PillCatch 1_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LS_SwimmingWheelChair_0
+      name: LS_PillCatch 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe64a1d08f8ad1200800000000000000
-      internalID: 152463745725646575
+      spriteID: 0b82fc48a74dc9d50800000000000000
+      internalID: 6745499964573427888
       vertices: []
       indices: 
       edges: []
@@ -133,15 +133,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      LS_SwimmingWheelChair_0: 152463745725646575
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
