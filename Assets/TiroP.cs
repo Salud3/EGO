@@ -66,13 +66,10 @@ public class TiroP : MonoBehaviour
 		{
 			distance.distanciaVisible = true;
 			StartCoroutine(AfilliateCamera());
-<<<<<<< HEAD:Assets/TiroP.cs
 			rb.velocity -= new Vector2 (0.05f, 0);
-=======
 			rb.velocity -= new Vector2 (.05f, 0);
 			Animator a = rb.GetComponent<Animator>();
 			a.SetTrigger("Lanzado");
->>>>>>> 5ca647113489a8d8fea99260333396443e1eb443:Assets/Scripts/MG2/TiroP.cs
 
 			if(rb.velocity.y <= 0.1 && rb.velocity.x <= 0.1)
 			{

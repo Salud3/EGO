@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask ContactoInferior;
     
     [Header("Movimiento")]
-    [SerializeField] float gravity = 9.81f;
+    [SerializeField] float gravity = 1f;
     [SerializeField] float speed;
 
     [Header("Salto")]
@@ -42,11 +42,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (jumping && GMaster1.Instance.startG)
         {
-            jumpBufferTim += Time.fixedDeltaTime;
-            if (jumpBufferTim > jumpBufferTime)
+            jumpBufferTim -= Time.deltaTime;
+            if (jumpBufferTim < 0)
             {
                 jumping = false;
-                jumpBufferTim = 0;
+                jumpBufferTim = jumpBufferTime; 
             }
 
         }
@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //rg.MovePosition(transform.position + new Vector3(speed, jumpForce) * Time.deltaTime);
             rg.velocity = new Vector2(GMaster1.Instance.Speed,jumpForce);
+            
         }
         else if (!jumping && GMaster1.Instance.startG)
         {
@@ -90,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         if (FLOOR)
         {
             canJump = true;
+
         }else
         {
             canJump = false;
