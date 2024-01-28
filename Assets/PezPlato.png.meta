@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PezPlato_0: 3050118314709468751
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
