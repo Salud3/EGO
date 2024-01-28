@@ -44,7 +44,7 @@ public class Cable : MonoBehaviour
 
         Vector2 direccion = posicionActual - puntoOrigen;
 
-        float angulo = Vector2.SignedAngle(Vector2.right * (transform.lossyScale-new Vector3(0.5f,0.5f,0.5f)), direccion);
+        float angulo = Vector2.SignedAngle(Vector2.right * transform.lossyScale, direccion);
 
         transform.rotation = Quaternion.Euler(0, 0, angulo);
     }

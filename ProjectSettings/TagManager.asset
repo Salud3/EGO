@@ -3,15 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Food
+  - NotFood
+  - Deleter
+  - ForDelete
+  - Floor
+  - Finished
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
+  - ForDelete
   - 
   - 
   - 
