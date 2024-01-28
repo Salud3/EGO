@@ -51,7 +51,18 @@ public class GameManager : MonoBehaviour
 
     public void SceneLoad(int a)
     {
-        SceneManager.LoadScene(a);
+        StartCoroutine(MusicLoader(a));
+    }
+
+    public IEnumerator MusicLoader(int sceneIndex)
+    {
+
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene(sceneIndex);
+        AudioManager.Instance.musicSource.Stop();
+        yield return new WaitForSeconds(0.1f);
+        AudioManager.Instance.ChargeMusicLevel();
+
     }
 
 }
