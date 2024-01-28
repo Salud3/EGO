@@ -43,23 +43,23 @@ public class AudioManager : MonoBehaviour
                 init = true;
                 break;
             case 1:
-                PlayMusic("Tutorial");
+                PlayMusic("Dentadura");
                 init = true;
                 break;
             case 2:
-                PlayMusic("Level");
+                PlayMusic("Alberca");
                 init = true;
                 break;
             case 3:
-                PlayMusic("Level");
+                PlayMusic("1000Mts");
                 init = true;
                 break;
             case 4:
-                PlayMusic("Level");
+                PlayMusic("Atrapar");
                 init = true;
                 break;
             case 5:
-                PlayMusic("Credits");
+                PlayMusic("MainTheme");//Credits
                 init = true;
                 break;
             default:

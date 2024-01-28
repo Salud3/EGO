@@ -1,26 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
     public Slider _musicSlider, _sfxslider;
-    //public Animator FondoNegro;
 
     private void Awake()
     {
-        //FondoNegro = GameObject.Find("/Canvas/FondoNegro").GetComponent<Animator>();
-        _musicSlider = GameObject.Find("/Canvas/MenuOptions/MusicLevel").GetComponent<Slider>();
-        _sfxslider = GameObject.Find("/Canvas/MenuOptions/SFXLevel").GetComponent<Slider>();
+        _musicSlider = GameObject.Find("/Canvas/MenuOptions/SliderMusic").GetComponent<Slider>();
+        _sfxslider = GameObject.Find("/Canvas/MenuOptions/SliderSFX").GetComponent<Slider>();
         _sfxslider.value = .5f;
         _musicSlider.value = .5f;
-        
 
     }
+
     private void Start()
     {
-        
+
         GameObject a = _musicSlider.gameObject.transform.parent.gameObject;
         a.SetActive(false);
 
@@ -35,8 +34,7 @@ public class UIController : MonoBehaviour
     }
     public void Play()
     {
-        //FondoNegro.SetTrigger("Fadein");
-        //GameManager.Instance.Loadscene();
+        GameManager.Instance.SceneLoad(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void MusicVolume()
     {
@@ -46,4 +44,9 @@ public class UIController : MonoBehaviour
     {
         AudioManager.Instance.SFXVolume(_sfxslider.value);
     }
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
 }
