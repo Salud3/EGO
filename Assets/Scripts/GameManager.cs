@@ -66,6 +66,20 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.musicSource.Stop();
         yield return new WaitForSeconds(0.1f);
         AudioManager.Instance.ChargeMusicLevel();
+        if (sceneIndex == 2)
+        {
+            yield return new WaitForSeconds(5.5f);
+            AudioManager.Instance.PlaySounds("WaterSplash");
+            yield return new WaitForSeconds(0.1f);
+            AudioManager.Instance.PlaySounds("Splash");
+            yield return new WaitForSeconds(0.2f);
+            AudioManager.Instance.PlaySounds("WaterSplash");
+
+            yield return new WaitForSeconds(11f);
+            SceneLoad(sceneIndex + 1);
+
+        }
+
 
     }
 

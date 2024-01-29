@@ -1739,7 +1739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textTime: {fileID: 367521837}
-  time: 5
+  time: 30
   panelFinish: {fileID: 6636923996379227142}
   totalPointsText: {fileID: 0}
   start: 0
